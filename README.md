@@ -37,7 +37,7 @@ An important contextual factor to consider during the time period is the Covid-1
 
 # Result
 
-	We split the data we have into the following subsets: training data (Jan 1st, 2015 - Dec, 31st, 2017), validation data (Jan, 1st, 2018 - Dec. 31st, 2019), and test data (Jan, 1st 2019  - Dec, 31st 2019). As our baseline model, we used NeuralProphet without hyperparameter tuning. We built this model to examine the foundational components of NeuralProphet to compare against other existing models. The one factor we adjusted for within the baseline model is the use of the add_country_holidays function to add Australian holidays, which we also did for the tuned model. 
+We split the data we have into the following subsets: training data (Jan 1st, 2015 - Dec, 31st, 2017), validation data (Jan, 1st, 2018 - Dec. 31st, 2019), and test data (Jan, 1st 2019  - Dec, 31st 2019). As our baseline model, we used NeuralProphet without hyperparameter tuning. We built this model to examine the foundational components of NeuralProphet to compare against other existing models. The one factor we adjusted for within the baseline model is the use of the add_country_holidays function to add Australian holidays, which we also did for the tuned model. 
 When running our baseline model on the training set, we found the Root Mean Square Error  (RMSE) to be 7578.40 and the Mean Average Error (MAE) to be 5592.61. 
 
 	After implementing our baseline model, we proceeded with finding our best hyperparameters. To best fit the needs and characteristics of the model, we use the following parameters to tune: num_hidden_layers, changepoints_range, n_lags, epochs, learning_rate, seasonality_reg, trend_reg, batch_size, and loss_func. We found the following values to have the best accuracy outcome:
@@ -63,7 +63,7 @@ In short, to build the model, we must verify that the data is trend stationary. 
 
 	P : lag =1 or lag = 7 
 	D : 0 
-	Q: 1 
+	Q : 1 
 
 All in all, to measure the accuracy of the model, we used RMSE, where the model produced an RMSE of 12265.4. 
 
